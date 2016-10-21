@@ -8,12 +8,15 @@ export STORAGE_TYPE=elasticsearch
 export ES_CLUSTER=local-cluster
 export ES_HOSTS=localhost
 
+# Disable SCRIBE
+export SCRIBE_ENABLED=false
+
 # Kafka configuration
-KAFKA_ZOOKEEPER=localhost:2181
-KAFKA_TOPIC=record-invoke-trace
+export KAFKA_ZOOKEEPER=localhost:2181
+export KAFKA_TOPIC=record-invoke-trace
 
 JAR_FILE=$1
 
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 
-$JAVA_HOME/bin/java -jar $JAR_FILE
+$JAVA_HOME/bin/java -XX:InitialHeapSize=512M -XX:MaxHeapSize=512M -jar $JAR_FILE
