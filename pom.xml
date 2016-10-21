@@ -495,46 +495,46 @@
         </configuration>
       </plugin>
 
-      <plugin>
-        <groupId>com.mycila</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-        <version>${license-maven-plugin.version}</version>
-        <configuration>
-          <!-- session.executionRootDirectory resolves properly even with nested modules -->
-          <header>${main.basedir}/src/etc/header.txt</header>
-          <excludes>
-            <exclude>.travis.yml</exclude>
-            <exclude>.gitignore</exclude>
-            <exclude>.mvn/**</exclude>
-            <exclude>mvnw*</exclude>
-            <exclude>etc/header.txt</exclude>
-            <exclude>**/.idea/**</exclude>
-            <exclude>LICENSE</exclude>
-            <exclude>**/*.md</exclude>
-            <exclude>apache-cassandra-*/**</exclude>
-            <exclude>elasticsearch-2*/**</exclude>
-            <exclude>kafka_*/**</exclude>
-            <exclude>src/test/resources/**</exclude>
-            <exclude>src/main/resources/**</exclude>
-          </excludes>
-          <strictCheck>true</strictCheck>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>com.mycila</groupId>
-            <artifactId>license-maven-plugin-git</artifactId>
-            <version>${license-maven-plugin.version}</version>
-          </dependency>
-        </dependencies>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <phase>compile</phase>
-          </execution>
-        </executions>
-      </plugin>
+      <!--<plugin>-->
+        <!--<groupId>com.mycila</groupId>-->
+        <!--<artifactId>license-maven-plugin</artifactId>-->
+        <!--<version>${license-maven-plugin.version}</version>-->
+        <!--<configuration>-->
+          <!--&lt;!&ndash; session.executionRootDirectory resolves properly even with nested modules &ndash;&gt;-->
+          <!--<header>${main.basedir}/src/etc/header.txt</header>-->
+          <!--<excludes>-->
+            <!--<exclude>.travis.yml</exclude>-->
+            <!--<exclude>.gitignore</exclude>-->
+            <!--<exclude>.mvn/**</exclude>-->
+            <!--<exclude>mvnw*</exclude>-->
+            <!--<exclude>etc/header.txt</exclude>-->
+            <!--<exclude>**/.idea/**</exclude>-->
+            <!--<exclude>LICENSE</exclude>-->
+            <!--<exclude>**/*.md</exclude>-->
+            <!--<exclude>apache-cassandra-*/**</exclude>-->
+            <!--<exclude>elasticsearch-2*/**</exclude>-->
+            <!--<exclude>kafka_*/**</exclude>-->
+            <!--<exclude>src/test/resources/**</exclude>-->
+            <!--<exclude>src/main/resources/**</exclude>-->
+          <!--</excludes>-->
+          <!--<strictCheck>true</strictCheck>-->
+        <!--</configuration>-->
+        <!--<dependencies>-->
+          <!--<dependency>-->
+            <!--<groupId>com.mycila</groupId>-->
+            <!--<artifactId>license-maven-plugin-git</artifactId>-->
+            <!--<version>${license-maven-plugin.version}</version>-->
+          <!--</dependency>-->
+        <!--</dependencies>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<goals>-->
+              <!--<goal>check</goal>-->
+            <!--</goals>-->
+            <!--<phase>compile</phase>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
 
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
