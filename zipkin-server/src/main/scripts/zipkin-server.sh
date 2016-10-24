@@ -17,6 +17,8 @@ export SCRIBE_ENABLED=false
 # Kafka configuration
 export KAFKA_ZOOKEEPER=localhost:2181
 export KAFKA_TOPIC=record-invoke-trace
+export KAFKA_STREAMS=1                  # Count of consumer threads consuming the topic
+export KAFKA_MAX_MESSAGE_SIZE=1048576   # Maximum size of a message containing spans in bytes
 
 BASEDIR=$(cd `dirname $0`; pwd)
 
