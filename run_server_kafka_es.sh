@@ -12,7 +12,7 @@ export ES_HOSTS=localhost
 export SCRIBE_ENABLED=false
 
 # Kafka configuration
-export KAFKA_ZOOKEEPER=localhost:2181
+export KAFKA_ZOOKEEPER=localhost:2181/local-kafka
 export KAFKA_TOPIC=record-invoke-trace
 
 JAR_FILE=$1
